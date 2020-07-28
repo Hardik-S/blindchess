@@ -17,3 +17,24 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.game-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.table td {
+  text-align: center;
+}
+
+.table th {
+  text-align: center;
+}

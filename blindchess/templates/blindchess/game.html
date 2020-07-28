@@ -1,0 +1,35 @@
+<html>
+<head>
+    {% load static %}
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!--  Including the chessboardjs files:-->
+    <script src="{% static 'js/chessboard-1.0.0.js' %}"></script>
+    <script src="{% static 'js/chess.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/chessboard-1.0.0.css' %}">
+
+
+  
+  </head>
+<body>
+  <div id="myBoard" style="width: 400px"></div>
+  <label>Status:</label>
+  <div id="status"></div>
+  <label>FEN:</label>
+  <div id="fen"></div>
+  <label>PGN:</label>
+  <div id="pgn"></div>
+</body>
+
+  
+
+  
+  
+<!--
+  Now including our own custom JS
+  Note that we could write JS directly in between the script tags if you'd 
+  rather, but i didn't want to so i put it in a new file. 
+-->
+  <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</html>

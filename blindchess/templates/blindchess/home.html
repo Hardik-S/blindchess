@@ -1,1 +1,43 @@
-{% extends "blindchess/layout.html" %}
+{% extends "blindchess/layout.html" %} 
+
+{% block content %}
+
+<container>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Mode</th>
+        <th scope="col">Host</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Date</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Challenger</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for game in games %}
+      <tr>
+        {% if game.mode == 'Blind' %}
+        <th scope="row">
+          <i class="fa fa-eye-slash" aria-hidden="true"></i> Blind
+        </th>
+        {% endif %} {% if game.mode == 'Normal' %}
+        <th scope="row"><i class="fas fa-chess"></i> Normal</th>
+        {% endif %}
+        <td>
+          <img
+            class="rounded-circle game-img"
+            src="{{game.host.profile.image.url}}"
+          />
+        </td>
+        <td>{{game.host.profile.rating}}</td>
+        <td>{{game.date}}</td>
+        <td>?</td>
+        <td>?</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</container>
+
+{% endblock content %}
